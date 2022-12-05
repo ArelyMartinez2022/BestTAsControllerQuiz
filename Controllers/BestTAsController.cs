@@ -19,6 +19,7 @@ In SayHello, take in the variable that was used in the route and return hello + 
 Hint (new folder/ file, get and set, constructor).
 */
 
+using BestTAsControllerQuiz.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace day2ApiInput.Controllers;
@@ -88,13 +89,16 @@ public class BestTasController : ControllerBase
     }
 
     // 4. THIS IS FOR SAY HELLO PT2  4. THIS IS FOR SAY HELLO PT2  4. THIS IS FOR SAY HELLO PT2
-    [HttpGet]
-       [Route("SayHelloTwo/{name}")]
+    [HttpGet] // if u use swagger use [HttpPost]
+       [Route("SayHelloTwo")] 
 
-       public string SayHello(SayHelloModel name)
+       public string SayHelloTwo(SayHelloModel item)
        {
-        return " Say Hello " + name.userName + name.lastName;
+        return " Say Hello " + item.firstName;
        } 
+    /*   {
+        "userName":"Arely"
+    }*/
     
     //return$"This would be my return {var} "
 }
