@@ -88,10 +88,18 @@ public class BestTasController : ControllerBase
         return$"Whats up {name}!";
     }
 
+    //you would need to create a model folder 
+    //them a cs folder for a cs 
+
+
+
     // 4. THIS IS FOR SAY HELLO PT2  4. THIS IS FOR SAY HELLO PT2  4. THIS IS FOR SAY HELLO PT2
     [HttpGet] // if u use swagger use [HttpPost]
        [Route("SayHelloTwo")] 
 
+        //SayHelloModel is the name of the cs folder in the model 
+        //item is variable name 
+        // need to have variable name 
        public string SayHelloTwo(SayHelloModel item)
        {
         return " Say Hello " + item.firstName;
